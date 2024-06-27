@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parking Slot Status</title>
+    <style>
+        .slot {
+            width: 200px;
+            height: 100px;
+            border: 2px solid black;
+            text-align: center;
+            line-height: 100px;
+            font-size: 24px;
+            margin: 50px auto;
+        }
+        .empty {
+            background-color: lightgreen;
+        }
+        .full {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <h1>Parking Slot Status</h1>
+    <div class="slot {% if parking_status == 'FULL' %}full{% else %}empty{% endif %}">
+        {% if parking_status == 'FULL' %}
+            Parking Slot Full
+        {% else %}
+            Parking Slot Empty
+        {% endif %}
+    </div>
+</body>
+</html>
